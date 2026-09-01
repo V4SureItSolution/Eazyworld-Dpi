@@ -1,0 +1,339 @@
+.eval-form-container {
+  padding: 1.5rem;
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+.eval-form-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Header section */
+.eval-header-grid {
+  display: grid;
+  grid-template-columns: 140px 1fr 280px;
+  align-items: center;
+  gap: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 1.5rem;
+}
+
+.eval-logo-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eval-logo-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.eval-company-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #1e293b;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.eval-iso-cert {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #475569;
+  line-height: 1.4;
+  text-transform: uppercase;
+  text-align: right;
+}
+
+/* Title Input */
+.eval-title-section {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.eval-title-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.eval-title-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b;
+  background-color: #ffffff;
+}
+
+/* Metadata Grid Table */
+.eval-meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.eval-meta-box {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  border: 1px solid #334155;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.eval-meta-label {
+  background-color: #ffffff;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #1e293b;
+  border-right: 1px solid #334155;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.eval-meta-input-cell {
+  background-color: #ffffff;
+  padding: 0.4rem 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.eval-meta-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 0.85rem;
+  color: #334155;
+  background: transparent;
+}
+
+/* Evaluation Steps Table */
+.eval-table-wrapper {
+  margin-bottom: 1.5rem;
+  overflow-x: auto;
+}
+
+.eval-steps-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #334155;
+}
+
+.eval-steps-table th {
+  background-color: #ffffff;
+  color: #334155;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.75rem 0.5rem;
+  border: 1px solid #334155;
+  text-align: center;
+}
+
+.eval-steps-table td {
+  padding: 0.75rem;
+  border: 1px solid #334155;
+  font-size: 0.85rem;
+  color: #1e293b;
+  vertical-align: top;
+}
+
+.eval-step-title-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #1e293b;
+  resize: vertical;
+  background: transparent;
+}
+
+.eval-step-desc-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 0.85rem;
+  color: #334155;
+  resize: vertical;
+  background: transparent;
+}
+
+.eval-score-input {
+  width: 60px;
+  padding: 0.4rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.eval-checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.btn-remove-row {
+  background-color: #e11d48;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-remove-row:hover {
+  background-color: #be123c;
+}
+
+.btn-add-row {
+  background-color: #4f46e5;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.65rem 1.25rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 2rem;
+}
+
+.btn-add-row:hover {
+  background-color: #4338ca;
+}
+
+/* Textarea Sections */
+.eval-section-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #1e293b;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.eval-textarea {
+  width: 100%;
+  min-height: 90px;
+  padding: 0.75rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #334155;
+  outline: none;
+  resize: vertical;
+  margin-bottom: 1.75rem;
+}
+
+/* Footer Controls */
+.eval-footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.eval-cert-group {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+.eval-cert-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  flex: 1;
+}
+
+.eval-cert-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.eval-cert-input {
+  padding: 0.65rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #334155;
+  outline: none;
+}
+
+.eval-action-btns {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn-eval-save {
+  background-color: #16a34a;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-eval-save:hover {
+  background-color: #15803d;
+}
+
+.btn-eval-reset {
+  background-color: #d97706;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-eval-reset:hover {
+  background-color: #b45309;
+}
