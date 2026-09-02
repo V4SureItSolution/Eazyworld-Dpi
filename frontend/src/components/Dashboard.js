@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
-import { 
-  Gauge, 
-  Users, 
-  Layers, 
-  ClipboardList, 
-  UserCheck, 
-  BarChart3, 
-  ChevronRight, 
+import {
+  Gauge,
+  Users,
+  Layers,
+  ClipboardList,
+  UserCheck,
+  BarChart3,
+  ChevronRight,
   ChevronDown,
-  Menu, 
-  Handshake, 
-  Share2, 
-  Award, 
+  Menu,
+  Handshake,
+  Share2,
+  Award,
   LogOut,
   Tv,
   Building2,
@@ -22,9 +22,9 @@ import {
   CreditCard,
   UserPlus,
   FileEdit,
+  CheckSquare,
   MessageSquare,
   Search,
-  Badge,
   RotateCw,
   Printer,
   Calendar
@@ -39,8 +39,8 @@ import WorkLocation from './WorkLocation';
 import ProjectName from './ProjectName';
 import DrivingLicense from './DrivingLicense';
 import CandidateRegistration from './CandidateRegistration';
-import PreEvaluationTest from './PreEvaluationTest';
-import PostEvaluationTest from './PostEvaluationTest';
+import Equipments from './Equipments';
+import Checklist from './Checklist';
 import ParticipantFeedback from './ParticipantFeedback';
 import PersonalEvaluations from './PersonalEvaluations';
 import EvaluationForm from './EvaluationForm';
@@ -95,7 +95,7 @@ const Dashboard = ({ user, onLogout }) => {
         </div>
 
         <nav className="sidebar-nav">
-          <div 
+          <div
             className={`nav-item ${activeMenu === 'Dashboard' ? 'active' : ''}`}
             onClick={() => setActiveMenu('Dashboard')}
           >
@@ -106,7 +106,7 @@ const Dashboard = ({ user, onLogout }) => {
           </div>
 
           <div className="nav-section-title">ADMINISTRATION</div>
-          <div 
+          <div
             className={`nav-item ${activeMenu === 'User Management' ? 'active' : ''}`}
             onClick={() => setActiveMenu('User Management')}
           >
@@ -117,9 +117,9 @@ const Dashboard = ({ user, onLogout }) => {
           </div>
 
           <div className="nav-section-title">MANAGE</div>
-          
+
           {/* Master Entry Parent */}
-          <div 
+          <div
             className={`nav-item ${activeMenu === 'Master Entry' ? 'active' : ''}`}
             onClick={() => setMasterEntryOpen(!masterEntryOpen)}
           >
@@ -137,7 +137,7 @@ const Dashboard = ({ user, onLogout }) => {
           {/* Master Entry Submenus */}
           {masterEntryOpen && (
             <div className="sub-nav-container">
-              <div 
+              <div
                 className={`sub-nav-item ${activeMenu === 'Training Title' ? 'active' : ''}`}
                 onClick={() => setActiveMenu('Training Title')}
               >
@@ -145,7 +145,7 @@ const Dashboard = ({ user, onLogout }) => {
                 <span>Training Title</span>
               </div>
 
-              <div 
+              <div
                 className={`sub-nav-item ${activeMenu === 'Batch No' ? 'active' : ''}`}
                 onClick={() => setActiveMenu('Batch No')}
               >
@@ -153,7 +153,7 @@ const Dashboard = ({ user, onLogout }) => {
                 <span>Batch No</span>
               </div>
 
-              <div 
+              <div
                 className={`sub-nav-item ${activeMenu === 'Organization Details' ? 'active' : ''}`}
                 onClick={() => setActiveMenu('Organization Details')}
               >
@@ -161,7 +161,7 @@ const Dashboard = ({ user, onLogout }) => {
                 <span>Organization Details</span>
               </div>
 
-              <div 
+              <div
                 className={`sub-nav-item ${activeMenu === 'Company Info' ? 'active' : ''}`}
                 onClick={() => setActiveMenu('Company Info')}
               >
@@ -169,7 +169,7 @@ const Dashboard = ({ user, onLogout }) => {
                 <span>Company Info</span>
               </div>
 
-              <div 
+              <div
                 className={`sub-nav-item ${activeMenu === 'Trainers Name' ? 'active' : ''}`}
                 onClick={() => setActiveMenu('Trainers Name')}
               >
@@ -177,7 +177,7 @@ const Dashboard = ({ user, onLogout }) => {
                 <span>Trainers Name</span>
               </div>
 
-              <div 
+              <div
                 className={`sub-nav-item ${activeMenu === 'Work Location' ? 'active' : ''}`}
                 onClick={() => setActiveMenu('Work Location')}
               >
@@ -185,7 +185,7 @@ const Dashboard = ({ user, onLogout }) => {
                 <span>Work Location</span>
               </div>
 
-              <div 
+              <div
                 className={`sub-nav-item ${activeMenu === 'Project Name' ? 'active' : ''}`}
                 onClick={() => setActiveMenu('Project Name')}
               >
@@ -193,7 +193,7 @@ const Dashboard = ({ user, onLogout }) => {
                 <span>Project Name</span>
               </div>
 
-              <div 
+              <div
                 className={`sub-nav-item ${activeMenu === 'Driving License' ? 'active' : ''}`}
                 onClick={() => setActiveMenu('Driving License')}
               >
@@ -204,7 +204,7 @@ const Dashboard = ({ user, onLogout }) => {
           )}
 
           {/* Registration Parent */}
-          <div 
+          <div
             className={`nav-item ${activeMenu === 'Registration' ? 'active' : ''}`}
             onClick={() => setRegistrationOpen(!registrationOpen)}
           >
@@ -222,7 +222,7 @@ const Dashboard = ({ user, onLogout }) => {
           {/* Registration Submenus */}
           {registrationOpen && (
             <div className="sub-nav-container">
-              <div 
+              <div
                 className={`sub-nav-item ${activeMenu === 'Registration List' ? 'active' : ''}`}
                 onClick={() => setActiveMenu('Registration List')}
               >
@@ -230,29 +230,29 @@ const Dashboard = ({ user, onLogout }) => {
                 <span>Registration List</span>
               </div>
 
-              <div 
-                className={`sub-nav-item ${activeMenu === 'Pre Evaluation Test' ? 'active' : ''}`}
-                onClick={() => setActiveMenu('Pre Evaluation Test')}
+              <div
+                className={`sub-nav-item ${activeMenu === 'Equipments' ? 'active' : ''}`}
+                onClick={() => setActiveMenu('Equipments')}
               >
                 <span className="nav-icon"><FileEdit size={16} /></span>
-                <span>Pre Evaluation Test</span>
+                <span>Equipments</span>
               </div>
 
-              <div 
-                className={`sub-nav-item ${activeMenu === 'Post Evaluation Test' ? 'active' : ''}`}
-                onClick={() => setActiveMenu('Post Evaluation Test')}
+              <div
+                className={`sub-nav-item ${activeMenu === 'Checklist' ? 'active' : ''}`}
+                onClick={() => setActiveMenu('Checklist')}
               >
-                <span className="nav-icon"><FileEdit size={16} /></span>
-                <span>Post Evaluation Test</span>
+                <span className="nav-icon"><CheckSquare size={16} /></span>
+                <span>Checklist</span>
               </div>
             </div>
           )}
 
           {/* EVALUATION Section */}
           <div className="nav-section-title">EVALUATION</div>
-          
+
           {/* Evaluation Parent */}
-          <div 
+          <div
             className={`nav-item ${activeMenu === 'Evaluation' ? 'active' : ''}`}
             onClick={() => setEvaluationOpen(!evaluationOpen)}
           >
@@ -270,7 +270,7 @@ const Dashboard = ({ user, onLogout }) => {
           {/* Evaluation Submenus */}
           {evaluationOpen && (
             <div className="sub-nav-container">
-              <div 
+              <div
                 className={`sub-nav-item ${activeMenu === 'Participant Feedback' ? 'active' : ''}`}
                 onClick={() => setActiveMenu('Participant Feedback')}
               >
@@ -278,7 +278,7 @@ const Dashboard = ({ user, onLogout }) => {
                 <span>Participant Feedback</span>
               </div>
 
-              <div 
+              <div
                 className={`sub-nav-item ${activeMenu === 'Personal Evaluations' ? 'active' : ''}`}
                 onClick={() => setActiveMenu('Personal Evaluations')}
               >
@@ -286,7 +286,7 @@ const Dashboard = ({ user, onLogout }) => {
                 <span>Personal Evaluations</span>
               </div>
 
-              <div 
+              <div
                 className={`sub-nav-item ${activeMenu === 'Evaluation Form' ? 'active' : ''}`}
                 onClick={() => setActiveMenu('Evaluation Form')}
               >
@@ -294,7 +294,7 @@ const Dashboard = ({ user, onLogout }) => {
                 <span>Evaluation Form</span>
               </div>
 
-              <div 
+              <div
                 className={`sub-nav-item ${activeMenu === 'View Evaluation' ? 'active' : ''}`}
                 onClick={() => setActiveMenu('View Evaluation')}
               >
@@ -306,14 +306,14 @@ const Dashboard = ({ user, onLogout }) => {
 
           {/* DOCUMENTS Section */}
           <div className="nav-section-title">DOCUMENTS</div>
-          
+
           {/* Documents Parent */}
-          <div 
+          <div
             className={`nav-item ${activeMenu === 'Documents' ? 'active' : ''}`}
             onClick={() => setDocumentsOpen(!documentsOpen)}
           >
             <div className="nav-item-left">
-              <span className="nav-icon"><Badge size={18} /></span>
+              <span className="nav-icon"><Award size={18} /></span>
               <span>Documents</span>
             </div>
             {documentsOpen ? (
@@ -326,15 +326,15 @@ const Dashboard = ({ user, onLogout }) => {
           {/* Documents Submenus */}
           {documentsOpen && (
             <div className="sub-nav-container">
-              <div 
+              <div
                 className={`sub-nav-item ${activeMenu === 'Certificate Print' ? 'active' : ''}`}
                 onClick={() => setActiveMenu('Certificate Print')}
               >
-                <span className="nav-icon"><Badge size={16} /></span>
+                <span className="nav-icon"><Award size={16} /></span>
                 <span>Certificate Print</span>
               </div>
 
-              <div 
+              <div
                 className={`sub-nav-item ${activeMenu === 'Renewal' ? 'active' : ''}`}
                 onClick={() => setActiveMenu('Renewal')}
               >
@@ -342,7 +342,7 @@ const Dashboard = ({ user, onLogout }) => {
                 <span>Renewal</span>
               </div>
 
-              <div 
+              <div
                 className={`sub-nav-item ${activeMenu === 'Attendance Sheet' ? 'active' : ''}`}
                 onClick={() => setActiveMenu('Attendance Sheet')}
               >
@@ -354,9 +354,9 @@ const Dashboard = ({ user, onLogout }) => {
 
           {/* REPORTS Section */}
           <div className="nav-section-title">REPORTS</div>
-          
+
           {/* Reports Parent */}
-          <div 
+          <div
             className={`nav-item ${activeMenu === 'Reports' ? 'active' : ''}`}
             onClick={() => setReportsOpen(!reportsOpen)}
           >
@@ -374,7 +374,7 @@ const Dashboard = ({ user, onLogout }) => {
           {/* Reports Submenus */}
           {reportsOpen && (
             <div className="sub-nav-container">
-              <div 
+              <div
                 className={`sub-nav-item ${activeMenu === 'Batch Report' ? 'active' : ''}`}
                 onClick={() => setActiveMenu('Batch Report')}
               >
@@ -382,7 +382,7 @@ const Dashboard = ({ user, onLogout }) => {
                 <span>Batch Report</span>
               </div>
 
-              <div 
+              <div
                 className={`sub-nav-item ${activeMenu === 'Overall Report' ? 'active' : ''}`}
                 onClick={() => setActiveMenu('Overall Report')}
               >
@@ -390,7 +390,7 @@ const Dashboard = ({ user, onLogout }) => {
                 <span>Overall Report</span>
               </div>
 
-              <div 
+              <div
                 className={`sub-nav-item ${activeMenu === 'Monthly Report' ? 'active' : ''}`}
                 onClick={() => setActiveMenu('Monthly Report')}
               >
@@ -398,7 +398,7 @@ const Dashboard = ({ user, onLogout }) => {
                 <span>Monthly Report</span>
               </div>
 
-              <div 
+              <div
                 className={`sub-nav-item ${activeMenu === 'Consolidated Report' ? 'active' : ''}`}
                 onClick={() => setActiveMenu('Consolidated Report')}
               >
@@ -415,8 +415,8 @@ const Dashboard = ({ user, onLogout }) => {
         {/* Top Header Bar */}
         <header className="top-header">
           <div className="top-header-left">
-            <button 
-              className="menu-toggle-btn" 
+            <button
+              className="menu-toggle-btn"
               onClick={() => setSidebarOpen(!sidebarOpen)}
               aria-label="Toggle navigation menu"
             >
@@ -430,8 +430,8 @@ const Dashboard = ({ user, onLogout }) => {
           </div>
 
           <div className="top-header-right">
-            <div 
-              className="user-pill" 
+            <div
+              className="user-pill"
               onClick={() => setDropdownOpen(!dropdownOpen)}
             >
               <div className="user-avatar">{userInitials}</div>
@@ -441,8 +441,8 @@ const Dashboard = ({ user, onLogout }) => {
 
             {dropdownOpen && (
               <div className="user-dropdown-menu">
-                <button 
-                  className="dropdown-item" 
+                <button
+                  className="dropdown-item"
                   onClick={onLogout}
                 >
                   <LogOut size={16} />
@@ -474,10 +474,10 @@ const Dashboard = ({ user, onLogout }) => {
           <DrivingLicense />
         ) : activeMenu === 'Registration List' ? (
           <CandidateRegistration />
-        ) : activeMenu === 'Pre Evaluation Test' ? (
-          <PreEvaluationTest />
-        ) : activeMenu === 'Post Evaluation Test' ? (
-          <PostEvaluationTest />
+        ) : activeMenu === 'Equipments' ? (
+          <Equipments />
+        ) : activeMenu === 'Checklist' ? (
+          <Checklist />
         ) : activeMenu === 'Participant Feedback' ? (
           <ParticipantFeedback />
         ) : activeMenu === 'Personal Evaluations' ? (

@@ -5,13 +5,11 @@ import './UserManagement.css';
 const CandidateRegistration = () => {
   const [selectedBatch, setSelectedBatch] = useState('Select a batch number');
   const [searchTerm, setSearchTerm] = useState('');
-  const [candidates, setCandidates] = useState([]);
   const [notification, setNotification] = useState(null);
 
   const handleReset = () => {
     setSelectedBatch('Select a batch number');
     setSearchTerm('');
-    setCandidates([]);
   };
 
   const handleView = () => {

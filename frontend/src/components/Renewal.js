@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, RotateCw, LayoutGrid, Calendar } from 'lucide-react';
+import { Search, RotateCw, LayoutGrid } from 'lucide-react';
 import './UserManagement.css';
 
 const Renewal = () => {

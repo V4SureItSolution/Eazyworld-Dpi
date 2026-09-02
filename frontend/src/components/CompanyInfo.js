@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Plus, Edit3, X } from 'lucide-react';
+import { Plus, X } from 'lucide-react';
 import api from '../Api';
 import './UserManagement.css';
 
